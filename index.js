@@ -1,0 +1,1 @@
+const str = 'the quick brown fox jumps the lazy dog'

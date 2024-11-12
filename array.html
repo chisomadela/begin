@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array and Number methods</h1>
+    <ul id="array">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script>
+        const numbers = [12,5,8,130,44,2,17,9,33,105,68,72,19];
+        // numbers greater than 20
+        const greaterThan20 = 
+        numbers.filter(num => num > 20);
+
+        //array where each number is multiplied by 2
+        const multipliedBy2 = numbers.map(num => num*2);
+
+        //sum of all numbers in the array
+        const sum = numbers.reduce((acc, num) => acc + num, 0);
+        
+        //numbers in descending order
+        const descendingOrder = [...numbers].sort((a,b) => b-a);
+
+        //numbers greater than 50
+        const firstGreaterThan = numbers.find(num => num > 50);
+
+        //33 inclusive?
+        const contains33 = numbers.includes(33);
+
+        //array containing the first five elements
+        const firstFiveElement = 
+        numbers.slice(0,5);
+
+        //replace the 2nd and 3rd element with 15 and 25
+        const replacedElements = [...numbers];
+        replacedElements.splice(1,2,15,25);
+
+        //reverse the order of the elements in the array
+        const reversedOrder = [...numbers].reverse();
+
+        //if every number is less than 200?
+        const allLessThan200 = 
+        numbers.every(num => num < 200);
+
+        //increase each number by 1
+        const increasedBy1 =
+        numbers.map(num => num + 1);
+
+        //cut out the first 6 numbers and return the remainder of the array
+        const remainderAfterFirst6 = 
+        numbers.slice(6);
+
+        //cut out the last 5 numbers and add "last" to each
+        const last5Modified = 
+        numbers.slice(-5).map(num => `${num}last`);
+
+        //first number that is a multiple of 2,3 and 5
+        const multipleOf235 = numbers.find(num => num % 2 ===0 
+        && num % 3 ===0 && num % 5 ===0);
+
+        //even and odd numbers
+        const evens = numbers.filter(num => num % 2 === 0);
+        const odds = numbers.filter(num => num % 2 !== 0);
+
+        //remainder when divided by 7 in descending order
+        const sortedByRemainder7 = [...numbers].sort((a,b) => (b%7) - (a%7));
+
+        //index of the minimum element
+        const minIndex =
+        numbers.indexOf(Math.min(...numbers));
+
+        //sum of squares of numbers > 50
+        const sumOfSquareGreater50 = 
+        numbers
+             .filter(num => num>50)
+             .map(num => num**2)
+             .reduce((acc,num) => acc + num, 0);
+
+             <ul id="array">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+            
+        
+        
+        
+        
+        </script>
+</body>
+</html>

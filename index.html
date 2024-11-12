@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>the quick brown fox jumps over the lazy dog<h1>  
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ol>
+        <li class="front"></li>
+        <li class="front"></li>
+        <li class="front"></li>
+        <li class="front"></li>
+        <li class="front"></li>
+    </ol>
+    <ul>
+        <li id="week1">                                                                                                                                                                                                                                                                                                                                                                                                                                      </li>
+        <li id="week2"></li>
+        <li id="week3"></li>
+        <li id="week4"></li>s
+        <li id="week5"></li>
+    </ul>
+
+    <script>
+
+        <!-- using if else -->
+        const num1 = prompt('score in math')
+        const num2 = prompt('score in engish')
+        
+        if(num1 >= 50 && num2 >=50){
+            alert('promoted!')
+        }
+        else if (num1 <= 50 && num2 >= 50){
+        alert('Resit the exam')
+        }
+        else if (num1 >= 50 && num2 <=50){
+         alert('Resit the exam')   
+        }
+             else (num1 <= 50 && num2 <= 50)
+    
+</script>
+<script>
+    const math = prompt('score in math')
+    const english = prompt('score in eng')
+
+    math >= 50 && eng >= 50 ?
+    alert('You are promoted'):
+
+    math >=50 || eng >= 50 ?
+    alert(`You need to reseat ${math >= 50 ? 'english': 'mathematics'}`):
+    alert("You need to reseat" + (math >= 50 ? 'english': 'mathematics'))
+
+    alert('You are to repeat the class')
+</script>
+
+</body>
+<script src="./index.js"></script>
+</html> 
