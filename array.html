@@ -97,26 +97,34 @@
              .map(num => num**2)
              .reduce((acc,num) => acc + num, 0);
 
-             <ul id="array">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
+             const answers = [
+           ` Numbers greater than 20: ${greaterThan20}`,
+           ` Each number multiplied by 2: ${multipliedBy2}`,
+           ` Sum of all numbers: ${sum}`,
+            `Numbers in descending order: ${descendingOrder}`,
+            `First number greater than 50: ${firstGreaterThan50}`,
+            `Contains 33: ${contains33}`,
+            `First five elements: ${firstFiveElements}`,
+            `Replaced 2nd and 3rd elements: ${replacedElements}`,
+            `Reversed order: ${reversedOrder}`,
+            `All numbers less than 200: ${allLessThan200}`,
+            `Each number incremented by 1: ${incrementedBy1}`,
+            `Remainder after first 6 elements: ${remainderAfterFirst6}`,
+            `Last 5 elements with 'last': ${last5Modified}`,
+            `First number that is a multiple of 2, 3, and 5: ${multipleOf235}`,
+            `Even numbers: ${evens}, Odd numbers: ${odds}`,
+            `Sorted by remainder when divided by 7: ${sortedByRemainder7}`,
+            `Index of minimum element: ${minIndex}`,
+            `Sum of squares of numbers greater than 50: ${sumOfSquaresGreater50}`
+        ];
+
+        const ul = document.getElementById('answers');
+        answers.forEach(answer => {
+            const li = document.createElement('li');
+            li.textContent = answer;
+            ul.appendChild(li);
+        });
+
             
         
         
