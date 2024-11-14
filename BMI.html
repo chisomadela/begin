@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        main{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height:100vh;
+            gap: 30px;
+            background-color: rgb(52, 52, 55);
+        }
+        h1{
+            text-transform: uppercase;
+            text-align: center;
+        }
+        main input{
+            outline: none;
+            border: none;
+            border-radius: 10px;
+            width: 70%;
+            padding-block: 10px;
+            padding-inline-start: 10px;
+            background-color: rgb(210, 153, 210);
+            color:white;
+        }
+        main input::placeholder{
+            color: white;
+        }
+        main button{
+            width: 70%;
+            border-radius: 10px;
+            border: none;
+            padding-block:10px;
+            text-transform: capitalize;
+            cursor: pointer;
+        }
+        main button:hover{
+            color: white;
+            background-color: #453e3e;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+   <main>
+    <input type="number" name="number" id="num" min="1" max="" placeholder="weight">
+    <input type="number" name="number" id="num" min="1" max="" placeholder="height">
+    <button type="submit">check Bmi</button>
+    <section>
+
+
+    </section>
+   </main> 
+</body>
+<script>
+    const inp = document.querySelectorAll('input')
+    const btn = document.querySelector('button')
+    const sect = document.querySelector('section')
+    const para1 = document.createElement('p')
+    const para2 = document.createElement('p')
+    const para3 = document.createElement('p')
+
+    btn.addEventListener('click',calculateBmi)
+
+    function calculateBmi(){
+        sect.append(para1, para2, para3)
+        const w = inp[0].value 
+        const h = inp[1].value / 100
+        const bmi = (w/h**2).toFixed(2)
+        // alert (bmi)
+        para1.innerHTML = bmi + 'kgm<sup>-2</sup>' 
+        para2.innerHTML =  bmi < 18.5 ? 'underweight' : bmi < 24.5 ? 'healthy weight' : bmi  < 30 ? 'over weight' : 'obese'
+
+
+    }
+</script>
+</html>
