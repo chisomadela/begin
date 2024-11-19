@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+<body>
+   <script>
+    // const person = {}
+    // const person2 = Object()
+
+    // person1.name = 'chisom'
+    // person1.age = 18
+
+
+    const celebrity = {}
+
+    celebrity.name = 'Selena Gomez'
+    celebrity.age = 31
+    celebrity.let = 'Founder of rare beauty'
+    celebrity['profession'] = 'Artist'
+    celebrity[100] = 'hundred'
+    celebrity['likes'] = ['singing','dogs','music']
+    celebrity.readMe = function(){
+        return `My favourite celebrity is ${this.name}, she is ${this.age}, ${this.let} , an ${this.profession} and likes ${this.likes[parseInt(Math.random()*likes.length)]}`
+    }
+    celebrity[''] = 'true?'
+    celebrity.name == 'Dua Lipa'
+    celebrity.isFemale = 'true'
+
+    function Artist (name,brand,gender){
+        this.name = name;
+        this.brand = brand;
+        this.gender = gender;
+        this.intro = function(){
+            return `Popular artist ${this.name} her brand ${this.brand}`
+        }
+    }
+
+    const artist1 = new Artist('Ariana grande','REM beauty','female')
+    const artist2 = new Artist('Rihanna','Fenty beauty','female')
+   </script> 
+</body>
+</html>

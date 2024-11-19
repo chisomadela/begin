@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>palindrome checker</title>
+</head>
+<style>
+      main{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height:100vh;
+            gap: 30px;
+            background-color: rgb(52, 52, 55);
+            color: wheat;
+        }
+        h1{
+            text-transform: uppercase;
+            text-align: center;
+        }
+        main input{
+            outline: none;
+            border: none;
+            border-radius: 10px;
+            width: 70%;
+            padding-block: 10px;
+            padding-inline-start: 10px;
+            background-color: rgb(210, 153, 210);
+            color:white;
+        }
+        main input::placeholder{
+            color: white;
+        }
+        main button{
+            width: 70%;
+            border-radius: 10px;
+            border: none;
+            padding-block:10px;
+            text-transform: capitalize;
+            cursor: pointer;
+        }
+        main button:hover{
+            color: white;
+            background-color: #453e3e;
+        }
+</style>
+<body>
+    <main>
+        <input type="text" name="pal" id="pal" placeholder="insert your text">
+        <p></p>
+    </main>
+</body>
+<script>
+    const input = document.querySelector('input')
+    const para = document.querySelector('p')
+
+    input.addEventListener('input',palindrome)
+
+    function palindrome(){
+        const regex = /[a-z0-9]/ig
+        const string = input.value
+        const stringMatch = string.match(regex).join('').toLowerCase()
+        const stringReversed = string.match(regex).reverse().join('').toLowerCase()
+
+        // para.innerHTML = stringReversed.join('').toLowerCase()
+
+        // para.innerHTML =string.match(regex).reverse() ? 'its a palindrome' : 
+        para.innerHTML = stringReversed == stringMatch ? string + ':Its a palindrome' : string + ':Word not suitable'
+    }
+</script>
+</html>
